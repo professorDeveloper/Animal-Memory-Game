@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <View
+        android:id="@+id/settings_dialog_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dialog_translation_bg"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/settings_dialog_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/settings_bgr_outer_margin_left"
+        android:layout_marginTop="@dimen/settings_bgr_outer_margin_top"
+        android:layout_marginRight="@dimen/settings_bgr_outer_margin_right"
+        android:layout_marginBottom="@dimen/settings_bgr_outer_margin_bottom"
+        android:background="@android:color/transparent"
+        android:padding="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/settings_bgr_inner_margin_left"
+            android:layout_marginTop="@dimen/settings_bgr_inner_margin_top"
+            android:layout_marginRight="@dimen/settings_bgr_inner_margin_right"
+            android:layout_marginBottom="@dimen/settings_bgr_inner_margin_bottom"
+            android:background="@drawable/settings_bgr"
+            android:orientation="vertical"
+            android:padding="0dp">
+
+            <TextView
+                android:id="@+id/settings_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/settings_title_margin_left"
+                android:layout_marginTop="@dimen/settings_title_margin_top"
+                android:layout_marginRight="@dimen/settings_title_margin_right"
+                android:layout_marginBottom="@dimen/settings_title_margin_bottom"
+                android:gravity="center"
+                android:text="@string/settings_title"
+                android:textColor="@color/base_color_green"
+                android:textSize="@dimen/settings_title_text_size" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/settings_checkbox_view_margin_left"
+                android:layout_marginTop="@dimen/settings_checkbox_view_margin_top"
+                android:layout_marginRight="@dimen/settings_checkbox_view_margin_right"
+                android:layout_marginBottom="@dimen/settings_checkbox_view_margin_bottom">
+
+                <CheckBox
+                    android:id="@+id/settings_sound_checkbox"
+                    android:layout_width="@dimen/settings_checkbox_widht"
+                    android:layout_height="@dimen/settings_checkbox_height"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="right|center_vertical|center_horizontal|center"
+                    android:background="@drawable/settings_selector_checkmark"
+                    android:button="@null"
+                    android:gravity="right|center_vertical|center_horizontal|center" />
+
+                <TextView
+                    android:id="@+id/settings_sound_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="left|center_vertical|center_horizontal|center"
+                    android:layout_toLeftOf="@+id/settings_sound_checkbox"
+                    android:gravity="left|center_vertical|center_horizontal|center"
+                    android:text="@string/settings_sound"
+                    android:textColor="@color/base_color_blue"
+                    android:textSize="@dimen/settings_text_checkbox_size" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/settings_checkbox_view_margin_left"
+                android:layout_marginTop="@dimen/settings_checkbox_view_margin_top"
+                android:layout_marginRight="@dimen/settings_checkbox_view_margin_right"
+                android:layout_marginBottom="@dimen/settings_checkbox_view_margin_bottom">
+
+                <CheckBox
+                    android:id="@+id/settings_timer_checkbox"
+                    android:layout_width="@dimen/settings_checkbox_widht"
+                    android:layout_height="@dimen/settings_checkbox_height"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="right|center_vertical|center_horizontal|center"
+                    android:background="@drawable/settings_selector_checkmark"
+                    android:button="@null"
+                    android:gravity="right|center_vertical|center_horizontal|center" />
+
+                <TextView
+                    android:id="@+id/settings_timer_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="left|center_vertical|center_horizontal|center"
+                    android:layout_toLeftOf="@+id/settings_timer_checkbox"
+                    android:gravity="left|center_vertical|center_horizontal|center"
+                    android:text="Vibrate"
+                    android:textColor="@color/base_color_blue"
+                    android:textSize="@dimen/settings_text_checkbox_size" />
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/settings_save_button"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/settings_save_button_height"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/settings_save_button_margin_left"
+                android:layout_marginTop="@dimen/settings_save_button_margin_top"
+                android:layout_marginRight="@dimen/settings_save_button_margin_right"
+                android:layout_marginBottom="@dimen/settings_save_button_margin_bottom"
+                android:background="@drawable/settings_selector_save_button"
+                android:gravity="center"
+                android:padding="@dimen/settings_save_button_text_padding"
+                android:shadowColor="@color/black"
+                android:shadowRadius="2"
+                android:text="@string/settings_save"
+                android:textColor="@color/white"
+                android:textSize="@dimen/settings_save_button_text_size" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/settings_dialog_close"
+            android:layout_width="@dimen/settings_close_icon_widht"
+            android:layout_height="@dimen/settings_close_icon_height"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            android:clickable="true"
+            android:contentDescription="@string/image_content_description"
+            android:focusable="true"
+            android:padding="0dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/settings_selector_close_button" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/main"
+    android:layout_height="match_parent"
+    android:background="@null">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/image_content_description"
+        android:scaleType="centerCrop"
+        android:src="@drawable/play_bgr" />
+
+    <RelativeLayout
+        android:id="@+id/play_memory_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/play_memory_game_margin_left"
+        android:layout_marginTop="@dimen/play_memory_game_margin_top"
+        android:layout_marginRight="@dimen/play_memory_game_margin_right"
+        android:layout_marginBottom="@dimen/play_memory_game_margin_bottom">
+
+        <LinearLayout
+            android:id="@+id/play_toplayout_root"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/progress_bgr"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/play_panel_text_margin_left"
+            android:paddingTop="@dimen/play_panel_text_margin_top"
+            android:paddingRight="@dimen/play_panel_text_margin_right"
+            android:paddingBottom="@dimen/play_panel_text_margin_bottom">
+
+            <RelativeLayout
+                android:id="@+id/play_timer_root"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/play_progress_text_margin_left"
+                android:layout_marginTop="@dimen/play_progress_text_margin_top"
+                android:layout_marginRight="@dimen/play_progress_text_margin_right"
+                android:layout_marginBottom="@dimen/play_progress_text_margin_bottom">
+
+                <TextView
+                    android:id="@+id/play_timer_text"
+                    android:layout_width="@dimen/play_timer_width"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="right|center_vertical|center_horizontal|center"
+                    android:paddingLeft="@dimen/play_timer_padding_left"
+                    android:paddingRight="@dimen/play_timer_padding_right"
+                    android:fontFamily="@font/blownormal"
+                    android:singleLine="true"
+                    android:text="60"
+                    android:textColor="@color/play_color_green"
+                    android:textSize="@dimen/play_default_text_size" />
+
+                <ProgressBar
+                    android:id="@+id/play_timer_progress"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/play_default_progress_size"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/play_timer_text"
+                    android:max="100"
+                    android:padding="0dp"
+                    android:progress="100"
+                    android:progressDrawable="@drawable/progress_blue" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp">
+
+                <LinearLayout
+                    android:id="@+id/play_score_root"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/play_score_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/base_color_blue"
+                        android:textSize="@dimen/play_default_text_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/play_level_root"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/play_score_root"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/play_level_left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/blownormal"
+                        android:gravity="center"
+                        android:text="@string/play_fragment_level"
+                        android:textColor="@color/base_color_blue"
+                        android:textSize="@dimen/play_default_text_size" />
+
+                    <TextView
+                        android:id="@+id/play_level_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:fontFamily="@font/blownormal"
+                        android:textColor="@color/base_color_blue"
+                        android:textSize="@dimen/play_default_text_size" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ln"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/play_toplayout_root"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="77dp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:gravity="center">
+
+            <RelativeLayout
+
+                android:id="@+id/containerImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/adMobViewPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

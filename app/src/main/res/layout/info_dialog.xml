@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <View
+        android:id="@+id/settings_dialog_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dialog_translation_bg"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/settings_dialog_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/settings_bgr_outer_margin_left"
+        android:layout_marginTop="@dimen/settings_bgr_outer_margin_top"
+        android:layout_marginRight="@dimen/settings_bgr_outer_margin_right"
+        android:layout_marginBottom="@dimen/settings_bgr_outer_margin_bottom"
+        android:background="@android:color/transparent"
+        android:padding="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/settings_bgr_inner_margin_left"
+            android:layout_marginTop="@dimen/settings_bgr_inner_margin_top"
+            android:layout_marginBottom="@dimen/settings_bgr_inner_margin_bottom"
+            android:background="@drawable/settings_bgr"
+            android:orientation="vertical"
+            android:padding="0dp">
+
+            <TextView
+                android:id="@+id/settings_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:layout_marginTop="@dimen/settings_title_margin_top"
+                android:layout_marginBottom="@dimen/settings_title_margin_bottom"
+                android:gravity="center"
+                android:text="About Game"
+                android:textColor="@color/base_color_green"
+                android:textSize="@dimen/settings_title_text_size" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/settings_checkbox_view_margin_top"
+                android:layout_marginBottom="@dimen/settings_checkbox_view_margin_bottom">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_14sdp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/blownormal"
+                    android:text="This application was created by Husanboy Azamov, a student of the GITA Academy of Programmers"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_16sdp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/info_ok"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/settings_save_button_height"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/settings_save_button_margin_left"
+                android:layout_marginTop="@dimen/settings_save_button_margin_top"
+                android:layout_marginRight="@dimen/settings_save_button_margin_right"
+                android:layout_marginBottom="@dimen/settings_save_button_margin_bottom"
+                android:background="@drawable/settings_selector_save_button"
+                android:gravity="center"
+                android:padding="@dimen/settings_save_button_text_padding"
+                android:shadowColor="@color/black"
+                android:shadowRadius="2"
+                android:text="@string/privacy_ok"
+                android:textColor="@color/white"
+                android:textSize="@dimen/settings_save_button_text_size" />
+        </LinearLayout>
+
+          </RelativeLayout>
+</RelativeLayout>

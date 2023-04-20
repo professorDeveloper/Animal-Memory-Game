@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/container"
+    android:background="@null">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/image_content_description"
+        android:scaleType="centerCrop"
+        android:src="@drawable/main_bgr" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingBottom="@dimen/main_cloud_4_margin_top">
+
+        <ImageView
+            android:id="@+id/main_cloud_4"
+            android:layout_width="@dimen/main_cloud_4_width"
+            android:layout_height="@dimen/main_cloud_4_height"
+            android:layout_gravity="left"
+            android:layout_marginLeft="@dimen/main_cloud_4_margin_left"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/image_content_description"
+            android:scaleType="fitCenter"
+            android:src="@drawable/cloud_4" />
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/main_cloud_3"
+        android:layout_width="@dimen/main_cloud_3_width"
+        android:layout_height="@dimen/main_cloud_3_height"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/main_cloud_3_margin_top"
+        android:layout_marginRight="@dimen/main_cloud_3_margin_right"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/image_content_description"
+        android:scaleType="fitCenter"
+        android:src="@drawable/cloud_3" />
+
+    <ImageView
+        android:id="@+id/main_cloud_2"
+        android:layout_width="@dimen/main_cloud_2_width"
+        android:layout_height="@dimen/main_cloud_2_height"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/main_cloud_2_margin_left"
+        android:layout_marginTop="@dimen/main_cloud_2_margin_top"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/image_content_description"
+        android:scaleType="fitCenter"
+        android:src="@drawable/cloud_2" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingBottom="@dimen/main_cloud_1_margin_top">
+
+        <ImageView
+            android:id="@+id/main_cloud_1"
+            android:layout_width="@dimen/main_cloud_1_width"
+            android:layout_height="@dimen/main_cloud_1_height"
+            android:layout_gravity="right"
+            android:layout_marginRight="@dimen/main_cloud_1_margin_right"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/image_content_description"
+            android:scaleType="fitCenter"
+            android:src="@drawable/cloud_1" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/main_icon_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_icon_button_size"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/main_icon_margin"
+        android:layout_marginTop="@dimen/main_icon_margin"
+        android:layout_marginRight="@dimen/main_icon_margin"
+        android:background="@color/transparent">
+
+        <ImageView
+            android:id="@+id/main_menu_icon_button"
+            android:layout_width="@dimen/main_icon_button_size"
+            android:layout_height="@dimen/main_icon_button_size"
+            android:layout_alignParentRight="true"
+            android:adjustViewBounds="true"
+            android:background="@drawable/info_click"
+            android:clickable="true"
+            android:contentDescription="@string/image_content_description"
+            android:padding="0dp"
+            android:scaleType="center"
+            android:src="@drawable/info" />
+
+        <ImageView
+            android:id="@+id/main_score_icon_button"
+            android:layout_width="@dimen/main_icon_button_size"
+            android:layout_height="@dimen/main_icon_button_size"
+            android:layout_marginRight="@dimen/main_icon_margin"
+            android:visibility="gone"
+            android:layout_toLeftOf="@+id/main_menu_icon_button"
+            android:adjustViewBounds="true"
+            android:clickable="true"
+            android:contentDescription="@string/image_content_description"
+            android:padding="0dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/main_selector_score_button" />
+
+        <ImageView
+            android:id="@+id/main_plus_icon_button"
+            android:layout_width="@dimen/main_icon_button_size"
+            android:layout_height="@dimen/main_icon_button_size"
+            android:layout_alignParentLeft="true"
+            android:adjustViewBounds="true"
+            android:clickable="true"
+            android:contentDescription="@string/image_content_description"
+            android:padding="0dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/main_selector_menu_button" />
+
+        <ImageView
+            android:id="@+id/main_rate_icon_button"
+            android:layout_width="@dimen/main_icon_button_size"
+            android:layout_height="@dimen/main_icon_button_size"
+            android:layout_marginLeft="@dimen/main_icon_margin"
+            android:layout_toRightOf="@+id/main_plus_icon_button"
+            android:adjustViewBounds="true"
+            android:clickable="true"
+            android:visibility="gone"
+            android:contentDescription="@string/image_content_description"
+            android:padding="0dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/main_selector_rate_button" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/main_bottom_cards"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/image_content_description"
+        android:scaleType="fitCenter"
+        android:src="@drawable/main_cards" />
+
+    <RelativeLayout
+        android:id="@+id/main_center_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/main_center_padding_bottom"
+        android:background="@color/transparent">
+
+        <LinearLayout
+            android:id="@+id/main_buttons_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="155dp"
+                android:background="@drawable/main_buttons_bgr"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/main_button_bgr_padding_left"
+                android:paddingTop="@dimen/main_button_bgr_padding_top"
+                android:paddingRight="@dimen/main_button_bgr_padding_right"
+                android:paddingBottom="@dimen/main_button_bgr_padding_bottom">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/main_easy_button"
+                    android:layout_width="@dimen/main_button_width"
+                    android:layout_height="@dimen/main_button_height"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/main_button_margin"
+                    android:background="@drawable/main_selector_level_button"
+                    android:fontFamily="@font/blownormal"
+                    android:gravity="center"
+                    android:padding="@dimen/main_button_padding"
+                    android:shadowColor="@color/black"
+                    android:shadowRadius="3"
+                    android:text="@string/main_button_easy"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/main_button_text_size" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/main_normal_button"
+                    android:layout_width="@dimen/main_button_width"
+                    android:layout_height="@dimen/main_button_height"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/main_button_margin"
+                    android:background="@drawable/main_selector_level_button"
+                    android:fontFamily="@font/blownormal"
+                    android:gravity="center"
+                    android:padding="@dimen/main_button_padding"
+                    android:shadowColor="@color/black"
+                    android:shadowRadius="2"
+                    android:text="@string/main_button_normal"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/main_button_text_size" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/main_hard_button"
+                    android:layout_width="@dimen/main_button_width"
+                    android:layout_height="@dimen/main_button_height"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/main_button_margin"
+                    android:background="@drawable/main_selector_level_button"
+                    android:fontFamily="@font/blownormal"
+                    android:gravity="center"
+                    android:padding="@dimen/main_button_padding"
+                    android:shadowColor="@color/black"
+                    android:shadowRadius="2"
+                    android:text="@string/main_button_hard"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/main_button_text_size" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/main_play"
+            android:layout_width="@dimen/main_play_img_width"
+            android:layout_height="@dimen/main_play_img_height"
+            android:layout_above="@+id/main_buttons_container"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/main_play_img_margin_bottom"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:src="@drawable/main_play" />
+
+        <ImageView
+            android:id="@+id/main_title"
+            android:layout_width="@dimen/main_title_img_width"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/main_buttons_container"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/main_title_img_margin_bottom"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:orientation="vertical"
+            android:scaleType="fitCenter"
+            android:src="@drawable/main_title" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/adMobViewMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

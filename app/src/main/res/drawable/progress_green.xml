@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@android:id/background">
+        <nine-patch android:src="@drawable/progress_empty_bgr" android:dither="true"/>
+    </item>
+    <item android:id="@android:id/progress">
+        <clip android:clipOrientation="horizontal">
+            <nine-patch android:src="@drawable/progress_green_progress" android:dither="true"/>
+        </clip>
+    </item>
+</layer-list>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <View
+        android:id="@+id/rate_dialog_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dialog_translation_bg"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rate_dialog_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/rate_bgr_outer_margin_left"
+        android:layout_marginTop="@dimen/rate_bgr_outer_margin_top"
+        android:layout_marginRight="@dimen/rate_bgr_outer_margin_right"
+        android:layout_marginBottom="@dimen/rate_bgr_outer_margin_bottom"
+        android:background="@android:color/transparent"
+        android:padding="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/rate_bgr_inner_margin_left"
+            android:layout_marginTop="@dimen/rate_bgr_inner_margin_top"
+            android:layout_marginRight="@dimen/rate_bgr_inner_margin_right"
+            android:layout_marginBottom="@dimen/rate_bgr_inner_margin_bottom"
+            android:background="@drawable/rate_bgr"
+            android:orientation="vertical"
+            android:padding="0dp">
+
+            <TextView
+                android:id="@+id/privacy_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/rate_title_margin_left"
+                android:layout_marginTop="@dimen/rate_title_margin_top"
+                android:layout_marginRight="@dimen/rate_title_margin_right"
+                android:layout_marginBottom="@dimen/rate_title_margin_bottom"
+                android:gravity="center"
+                android:text="@string/privacy_title"
+                android:textColor="@color/base_color_green"
+                android:textSize="@dimen/rate_title_text_size" />
+
+            <TextView
+                android:id="@+id/privacy_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical|center_horizontal|center"
+                android:layout_marginLeft="@dimen/rate_text_margin_left"
+                android:layout_marginTop="@dimen/rate_text_margin_top"
+                android:layout_marginRight="@dimen/rate_text_margin_right"
+                android:layout_marginBottom="@dimen/rate_text_margin_bottom"
+                android:gravity="left|center_vertical|center_horizontal|center"
+                android:textColor="@color/base_color_blue"
+                android:textSize="@dimen/rate_text_size" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/rate_button_margin_left"
+                android:layout_marginTop="@dimen/rate_button_margin_top"
+                android:layout_marginRight="@dimen/rate_button_margin_right"
+                android:layout_marginBottom="@dimen/rate_button_margin_bottom"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/privacy_ok_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/rate_save_button_height"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/rate_save_button_margin_left"
+                    android:layout_marginTop="@dimen/rate_save_button_margin_top"
+                    android:layout_marginRight="@dimen/rate_save_button_margin_left"
+                    android:layout_marginBottom="@dimen/rate_save_button_margin_bottom"
+                    android:layout_weight="1"
+                    android:background="@drawable/rate_selector_button"
+                    android:gravity="center"
+                    android:padding="0dp"
+                    android:shadowColor="@color/black"
+                    android:shadowRadius="2"
+                    android:text="@string/privacy_ok"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/rate_save_button_text_size" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/privacy_dialog_close"
+            android:layout_width="@dimen/rate_close_icon_widht"
+            android:layout_height="@dimen/rate_close_icon_height"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="0dp"
+            android:clickable="true"
+            android:contentDescription="@string/image_content_description"
+            android:focusable="true"
+            android:padding="0dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/rate_selector_close_button"
+            android:visibility="invisible" />
+    </RelativeLayout>
+</RelativeLayout>
